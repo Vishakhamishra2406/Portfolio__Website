@@ -1,0 +1,156 @@
+/* Custom styles */
+.nav-link {
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: #60a5fa;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Project card hover effect */
+.project-card {
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Skill icon animation */
+.skill-icon {
+    transition: transform 0.3s ease;
+}
+
+.skill-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4b5563;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
+}
+
+/* Mobile menu */
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: none;
+    }
+    
+    .mobile-menu.active {
+        display: block;
+    }
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.dark-mode .bg-gray-800 {
+    background-color: #2d2d2d;
+}
+
+.dark-mode .bg-gray-700 {
+    background-color: #3d3d3d;
+}
+
+.dark-mode .text-gray-300 {
+    color: #d1d5db;
+}
+
+.dark-mode .border-gray-600 {
+    border-color: #4b5563;
+}
+
+/* Scroll to top button hover effect */
+#scroll-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Typing animation cursor only for the name */
+.typing-cursor::after {
+    content: '|';
+    animation: blink 1s infinite;
+    color: #60a5fa; /* Same blue as your name */
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Typing cursor animation */
+.typing-cursor {
+    border-right: 2px solid #60a5fa;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: #60a5fa; }
+}
+
+/* Smooth transitions */
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+/* Skill bar animation */
+@keyframes fillBar {
+    from { width: 0; }
+    to { width: var(--level); }
+}
+
+.skill-bar {
+    animation: fillBar 1.5s ease-out forwards;
+}
+
+/* Navbar link hover effect */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #60a5fa;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Form input focus effect */
+input:focus, textarea:focus {
+    box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.5);
+}
